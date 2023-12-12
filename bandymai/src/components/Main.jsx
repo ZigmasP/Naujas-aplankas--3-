@@ -3,15 +3,14 @@ import './Main.css';
 import LoginForm from './LoginForm'; 
 
 const Main = () => {
-  const [showLoginForm, setShowLoginForm] = useState(false);
+  const [showLoginForm, setLoginForm] = useState(false);
 
   const handleLogin = (provider) => {
-    console.log(`Prisijungimas per ${provider}`);
-    
+    console.log(`Login from ${provider}`);
   };
 
-  const handleShowLoginForm = () => {
-    setShowLoginForm(true);
+  const handleLoginForm = () => {
+    setLoginForm(true);
   };
 
   return (
@@ -19,13 +18,15 @@ const Main = () => {
       <h1>Get Started</h1>
       <p>Already have no account?</p>
       <ul>
-        <li>Login</li>
+        <li onClick={handleLoginForm}>Login</li>
       </ul>
       <div className='SocialButton'>
         <button className='Google' onClick={() => handleLogin('Google')}>sign up Google</button>
         <button className='Facebook' onClick={() => handleLogin('Facebook')}>sign up Facebook</button>
       </div>
       <h3>Or</h3>
+      
+      {showLoginForm && <LoginForm />}
     </main>
   );
 };

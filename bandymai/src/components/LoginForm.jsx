@@ -10,18 +10,14 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Patikrinimas, ar visi laukai yra užpildyti
     if (!username || !email || !password) {
       setError('All fields must be filled');
       return;
     }
 
-    // Čia galite įdėti kitą validacijos logiką arba persiųsti duomenis serveriui
-    console.log('Name:', username);
     console.log('Email:', email);
     console.log('Password:', password);
 
-    // Jei viskas gerai, nustatykite klaidų būsenę kaip tuščią
     setError('');
   };
 
