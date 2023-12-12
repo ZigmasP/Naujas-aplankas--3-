@@ -6,6 +6,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,11 +18,16 @@ const LoginForm = () => {
 
     console.log('Email:', email);
     console.log('Password:', password);
-
     setError('');
+    setIsLoggedIn(true);
+
   };
 
   return (
+    <div>
+    {isLoggedIn ? (
+      <p>You are logged in!</p>
+    ) : (
     <form onSubmit={handleSubmit}>
       <div>
         <label>Name</label>
@@ -38,6 +44,8 @@ const LoginForm = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <button type="submit">Submit</button>
     </form>
+  )}
+  </div>
   );
 };
 
