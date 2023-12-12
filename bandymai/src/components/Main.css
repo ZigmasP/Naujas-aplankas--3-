@@ -37,9 +37,30 @@
   
   .SocialButton {
     display: flex;
-    flex-direction: row
-;
+    flex-direction: row;
     gap: 10px;
+  }
+
+  .Google {
+      background-color: transparent;
+      color: black;
+      border-style: solid;
+      border-color: rgb(73, 72, 72);
+  }
+
+  .Google:hover {
+    background-color: transparent;
+      color: black;
+      border-style: solid;
+      border-color: rgb(73, 72, 72);
+  }
+
+  .Facebook {
+    background-color: blue;
+  }
+
+  .Facebook:hover {
+    background-color: blue;
   }
   
   button {

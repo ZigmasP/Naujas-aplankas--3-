@@ -14,26 +14,26 @@ form {
   
   label {
     display: block;
-    margin-bottom: 5px;
+    margin: 0;
   }
   
   input {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin: 0;
   }
   
   button {
-    background-color: #2196F3;
+    background-color: #f32133;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 95%;
   }
   
   button:hover {
-    background-color: #0b7dda;
+    background-color: #f32133;;
   }
   

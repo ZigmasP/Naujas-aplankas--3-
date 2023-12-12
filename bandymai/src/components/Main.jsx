@@ -22,16 +22,10 @@ const Main = () => {
         <li>Login</li>
       </ul>
       <div className='SocialButton'>
-        <button onClick={() => handleLogin('Google')}>sign up Google</button>
-        <button onClick={() => handleLogin('Facebook')}>sign up Facebook</button>
+        <button className='Google' onClick={() => handleLogin('Google')}>sign up Google</button>
+        <button className='Facebook' onClick={() => handleLogin('Facebook')}>sign up Facebook</button>
       </div>
       <h3>Or</h3>
-
-      {showLoginForm ? (
-        <LoginForm />
-      ) : (
-        <button onClick={handleShowLoginForm}>Show Login Form</button>
-      )}
     </main>
   );
 };
